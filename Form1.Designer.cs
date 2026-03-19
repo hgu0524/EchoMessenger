@@ -33,6 +33,8 @@
             btnsend = new Button();
             listBoxchat = new ListBox();
             lblCount = new Label();
+            btnDelete = new Button();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // title
@@ -83,12 +85,34 @@
             lblCount.Size = new Size(0, 15);
             lblCount.TabIndex = 4;
             // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(40, 485);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(70, 24);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "삭제";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(116, 485);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(118, 24);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "전체 삭제";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
             ClientSize = new Size(919, 521);
+            Controls.Add(btnClear);
+            Controls.Add(btnDelete);
             Controls.Add(lblCount);
             Controls.Add(listBoxchat);
             Controls.Add(btnsend);
@@ -107,5 +131,7 @@
         private Button btnsend;
         private ListBox listBoxchat;
         private Label lblCount;
+        private Button btnDelete;
+        private Button btnClear;
     }
 }

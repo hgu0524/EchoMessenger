@@ -12,7 +12,11 @@ namespace EchoMessenger
 
             if (string.IsNullOrWhiteSpace(msg))
                 return;
-
+            if (msg.Length > 50)
+            {
+                MessageBox.Show("메시지는 50자 이하로 입력하세요.");
+                return;
+            }
             string time = DateTime.Now.ToString("HH:mm:ss");
 
             listBoxchat.Items.Add($"[{time}] {msg}");
@@ -21,7 +25,7 @@ namespace EchoMessenger
 
             textmessage.Clear();
             textmessage.Focus();
-        
+
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -47,6 +51,26 @@ namespace EchoMessenger
                 // 엔터 입력 소리/줄바꿈 방지
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (listBoxchat.SelectedItem == null)
+            {
+                MessageBox.Show("삭제할 메시지를 선택하세요.");
+                return;
+            }
+
+            listBoxchat.Items.Remove(listBoxchat.SelectedItem);
+
+            lblCount.Text = $"현재 대화: {listBoxchat.Items.Count}개";
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listBoxchat.Items.Clear();
+
+            lblCount.Text = "현재 대화: 0개";
         }
     }
 }
