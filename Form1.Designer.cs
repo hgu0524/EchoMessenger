@@ -50,6 +50,7 @@
             textmessage.Size = new Size(614, 23);
             textmessage.TabIndex = 1;
             textmessage.TextChanged += textBox1_TextChanged;
+            textmessage.KeyDown += textmessage_KeyDown;
             // 
             // btnsend
             // 
@@ -71,6 +72,7 @@
             listBoxchat.Name = "listBoxchat";
             listBoxchat.Size = new Size(764, 304);
             listBoxchat.TabIndex = 3;
+            listBoxchat.SelectedIndexChanged += listBoxchat_SelectedIndexChanged;
             // 
             // Form1
             // 

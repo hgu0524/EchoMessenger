@@ -6,7 +6,18 @@ namespace EchoMessenger
         {
             InitializeComponent();
         }
+        private void SendMessage()
+        {
+            string msg = textmessage.Text;
 
+            if (string.IsNullOrWhiteSpace(msg))
+                return;
+
+            listBoxchat.Items.Add(msg);
+
+            textmessage.Clear();
+            textmessage.Focus();
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -22,6 +33,23 @@ namespace EchoMessenger
 
             // 3. 입력창 비우기
             textmessage.Clear();
+            SendMessage();
+        }
+
+        private void listBoxchat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textmessage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SendMessage();
+
+                // 엔터 입력 소리/줄바꿈 방지
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }
