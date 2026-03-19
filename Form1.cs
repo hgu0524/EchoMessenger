@@ -8,15 +8,20 @@ namespace EchoMessenger
         }
         private void SendMessage()
         {
-            string msg = textmessage.Text;
+            string msg = textmessage.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(msg))
                 return;
 
-            listBoxchat.Items.Add(msg);
+            string time = DateTime.Now.ToString("HH:mm:ss");
+
+            listBoxchat.Items.Add($"[{time}] {msg}");
+
+            lblCount.Text = $"현재 대화: {listBoxchat.Items.Count}개";
 
             textmessage.Clear();
             textmessage.Focus();
+        
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -25,14 +30,6 @@ namespace EchoMessenger
 
         private void btnsend_Click(object sender, EventArgs e)
         {
-            // 1. 입력값 가져오기
-            string msg = textmessage.Text;
-
-            // 2. 리스트박스에 추가
-            listBoxchat.Items.Add(msg);
-
-            // 3. 입력창 비우기
-            textmessage.Clear();
             SendMessage();
         }
 

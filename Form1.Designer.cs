@@ -32,6 +32,7 @@
             textmessage = new TextBox();
             btnsend = new Button();
             listBoxchat = new ListBox();
+            lblCount = new Label();
             SuspendLayout();
             // 
             // title
@@ -74,12 +75,21 @@
             listBoxchat.TabIndex = 3;
             listBoxchat.SelectedIndexChanged += listBoxchat_SelectedIndexChanged;
             // 
+            // lblCount
+            // 
+            lblCount.AutoSize = true;
+            lblCount.Location = new Point(40, 467);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(0, 15);
+            lblCount.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Info;
             ClientSize = new Size(919, 521);
+            Controls.Add(lblCount);
             Controls.Add(listBoxchat);
             Controls.Add(btnsend);
             Controls.Add(textmessage);
@@ -96,5 +106,6 @@
         private TextBox textmessage;
         private Button btnsend;
         private ListBox listBoxchat;
+        private Label lblCount;
     }
 }
