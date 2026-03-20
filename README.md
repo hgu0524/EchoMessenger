@@ -1,4 +1,4 @@
-(C# 코딩) 에코 메신저
+##(C# 코딩) 에코 메신저
 
 개요
 
@@ -24,7 +24,8 @@
 
 ---
 
-실행 화면 (과제1)
+[과제 1 실행화면] <img width="1553" height="892" alt="image" src="https://github.com/user-attachments/assets/2f2b7eb3-3234-4658-9406-2e50da7a2a80" />
+
 
 
 
