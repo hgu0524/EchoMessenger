@@ -1,6 +1,6 @@
-##(C# 코딩) 에코 메신저
+(C# 코딩) 에코 메신저
 
-개요
+##개요
 
 * C# 프로그래밍 학습을 위한 Windows Forms 기반 프로젝트
 
@@ -23,8 +23,8 @@
 * ListBox를 활용한 메시지 저장 및 관리 기능 구현
 
 ---
-
-[과제 1 실행화면] <img width="1553" height="892" alt="image" src="https://github.com/user-attachments/assets/2f2b7eb3-3234-4658-9406-2e50da7a2a80" />
+## 실행화면 (과제1)
+![과제 1 실행화면] <img width="1553" height="892" alt="image" src="https://github.com/user-attachments/assets/2f2b7eb3-3234-4658-9406-2e50da7a2a80" />
 
 
 
@@ -46,7 +46,7 @@
 
 ---
 
-실행 화면 (과제2)
+##실행 화면 (과제2)
 
 
 
@@ -67,7 +67,7 @@
 
 ---
 
-실행 화면 (과제3)
+##실행 화면 (과제3)
 
 
 
@@ -88,7 +88,7 @@
 
 ---
 
-실행 화면 (과제4)
+##실행 화면 (과제4)
 
 
 
